@@ -1,0 +1,359 @@
+/*--------------------------RESET-----------------------------------*/
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    height: 100%;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*--------------------------COLORS-----------------------------------*/
+
+.red{
+    background-color:#fe4221;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+.both{
+    clear:both;
+}
+
+/*--------------------------WHITE SPACES-----------------------------------*/
+.top-space-big{
+    padding-top: 40px;
+ }
+ .bottom-space-big{
+    padding-bottom: 40px;
+ }
+ .top-space-small{
+    padding-top: 20px;
+ }
+
+ .bottom-space-small{
+    padding-bottom: 20px;
+ }
+ 
+ 
+/*--------------------------TEXT-----------------------------------*/
+.text {
+    font-family: Georgia, Times, "Times New Roman", serif;
+    text-align: center;
+ }
+
+ .text.normal {
+    font-size: 18px;
+    line-height: 28px;
+ }
+ .text.section {
+    font-size: 16px;
+ }
+
+ .text.title {
+    text-align: center;
+    font-size: 32px;
+ }
+  .text.button {
+    text-align: right;
+    font-size: 16px;
+    line-height: 40px;
+ }
+ .text.contact{
+    font-size: 16px;
+    line-height: 24px;
+ }
+ .txt-white{
+  color:white;
+}
+.txt-grey{
+  color:#4f5052;
+}
+.txt-red{
+   color:#fe4221;
+}
+.contact_column a {
+
+    color:#fe4221;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+.footer a {
+      color:#8f2c1b;
+}
+/*--------------------------ELEMENTS-----------------------------------*/
+
+body, html {
+    height: 100%;
+}
+a {
+    text-decoration: none;
+}
+.header {
+    background: url(../images/novolar_logo.png) no-repeat center center;  
+    background-color: rgba(254,66,33,0.8);
+    width: 100%;
+    height: 8%;
+    min-height: 60px;
+    position: absolute;
+    z-index: 99;
+}
+.slider {
+    background: url(../images/bck.jpg) no-repeat center left;  
+    background-size: cover;
+    width: 100%;
+    height: 73%;
+    min-height: 100px;
+}
+.container {
+    width: 60%;
+    height: auto;
+    margin:auto;
+}
+.footer {
+    width: 100%;
+    height: 6%;
+    min-height: 44px;
+    font-size: 11px;
+    line-height: 44px;
+    color:#8f2c1b;
+
+}
+.social_container {
+    width: 70%;
+    height: 60px;
+    margin:auto;
+    min-width: 550px;
+}
+.brand_container{
+    background: url(../images/bck02.jpg) no-repeat center left; 
+    background-size: cover; 
+    width: 100%;
+    margin:auto;
+ }
+ .image_container{
+    display: inline-table;
+    padding: 10px;
+ }
+ .image_contact{
+    display: inline-block;
+    padding: 10px;
+    width: 60%;
+ }
+ .wrapper{
+    text-align: center;
+    width: 100%;
+ }
+
+ .contact_container {
+    width: 60%;
+    height: auto;
+    margin:auto;
+}
+
+.contact_column {
+    width: 33.33%;
+    height: auto;
+    float: left;
+    display:inline;
+    text-align: center;
+}
+
+/*--------------------------BUTTONS-----------------------------------*/
+
+.button-container{
+    width: 250px;
+    max-height: 40px;
+    padding: 10px;
+    max-width: 90%;
+    min-width: 216px;
+    margin:auto;
+}
+ .facebook {
+    float:left;
+    background: url(../images/facebook.jpg) no-repeat center left; 
+    background-color: #5d82d1;
+    border-bottom: 1px solid #4b6aaa;
+    text-shadow: 0px 1px #4e6daf;
+}
+.pinterest {
+    float: right;
+    background: url(../images/pinterest.jpg) no-repeat center left; 
+    background-color: #e13138;
+    border-bottom: 1px solid #ae262c;
+    text-shadow: 0px 1px #b1272d;
+}
+
+.facebook:hover{
+    background-color:#688bd5;
+}
+.facebook:active {
+     background-color: #5f7bb7;
+}
+
+.pinterest:hover{
+    background-color:#d9454b;
+}
+.pinterest:active {
+     background-color: #c83f44;
+}
+
+/*--------------------------MEDIA QUERIES-----------------------------------*/
+
+
+@media (min-width : 200px) and (max-width : 480px) {
+
+        .header {
+            background: url(../images/novolar_logo_mobile.png) no-repeat center center; 
+            background-color: rgba(254,66,33,0.8);
+            width: 100%;
+            height: 6%;
+            min-height: 44px;
+            position: absolute;
+            z-index: 99; 
+        }
+
+        .slider {
+            background: url(../images/bck_mobile.jpg) no-repeat center left; 
+            background-size: cover; 
+            width: 100%;
+            height: 50%;
+            min-height: 50px;
+            }
+
+        .container {
+            width: 90%;
+            height: auto;
+            margin:auto;
+        }
+
+        .social_container {
+            width: 90%;
+            height: auto;
+            margin:auto;
+            min-width: 100%;
+        }
+
+         .facebook {
+            float:none;
+            margin-bottom: 20px;
+        }
+        .pinterest {
+            float: none;
+        }     
+        .image_container{
+            width: 40%;
+         }
+        .contact_container {
+            width: 80%;
+        }
+        .contact_column {
+            width: 100%;
+        }
+        .image_contact{
+            width: 50%;
+
+         }
+
+}
+
+
+
+@media (min-width : 480px) and (max-width : 1024px) {
+
+        .slider {
+            background-size: cover;
+            width: 100%;
+            height: 60%;
+            min-height: 70px;
+            }
+
+
+        .container {
+            width: 90%;
+            height: auto;
+            margin:auto;
+        }
+
+        .social_container {
+            width: 90%;
+            height: auto;
+            margin:auto;
+            min-width: 100%;
+        }
+
+         .facebook {
+            float:none;
+            margin-bottom: 20px;
+        }
+        .pinterest {
+            float: none;
+        }  
+        .contact_container {
+            width: 100%;
+        }  
+
+         .image_contact{
+            width: 50%;
+         } 
+        
+}
+
+/*------------------
+        Lunes a Viernes :
+          10:00-13:30 horas
+          17:00-20:30 horas
+          S&aacute;bados :
+          10:00-13:30 horas
+          18:00-20:30 horas
+
+
+          Avenida Alcalde Federico Molina Orta, 28
+          21007 Huelva, Espa&ntilde;a
+
+          -----------------*/
+
