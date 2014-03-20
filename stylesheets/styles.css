@@ -1,5 +1,4 @@
-/*--------------------------RESET-----------------------------------*/
-    /* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -91,11 +90,13 @@ img {
  }
  .text.section {
     font-size: 16px;
+    text-shadow: 0px 1px rgba(0,0,0,0.5);
  }
 
  .text.title {
     text-align: center;
-    font-size: 32px;
+    font-size: 22px;
+    line-height: 41px;
  }
   .text.button {
     text-align: right;
@@ -125,6 +126,61 @@ img {
 .footer a {
       color:#8f2c1b;
 }
+
+/*--------------------------ELEMENTS-----------------------------------*/
+
+.logo {
+    height: 100%;
+    width: 175px; 
+    float: left;
+    background-image:url(../images/novolar_logo.png); 
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+
+}
+
+
+.menu{
+    height: 100%;
+    width: 60%; 
+    float: left;
+}
+
+.opt_wrapper{
+
+    height: 100%;
+    width: 50%;
+    display: table;
+    margin-left: 25%;
+    
+}
+
+.opt{
+
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0.8em;
+    padding-right: 15px;
+}
+
+.social{
+    height: 100%;
+    float: right;
+    text-align: center; 
+    display: table;
+}
+
+.button{
+    height: 100%;
+    float: right;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    background-size: 100%;
+    min-width: 50px;
+
+}
+
 /*--------------------------ELEMENTS-----------------------------------*/
 
 body, html {
@@ -133,15 +189,35 @@ body, html {
 a {
     text-decoration: none;
 }
-.header {
-    background: url(../images/novolar_logo.png) no-repeat center center;  
-    background-color: rgba(254,66,33,0.8);
-    width: 100%;
-    height: 8%;
-    min-height: 60px;
-    position: absolute;
-    z-index: 99;
+.header { 
+    background-color: #fe4221;
+    width: 100%;                
+    height: 80px;
+    position: fixed;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
 }
+.header_blank{ 
+    width: 100%;                
+    height: 10%;
+    min-height: 44px;
+}
+
+.header_wrapper { 
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    margin-left: 10%;
+}
+
+.slider {
+    background-image: url(../images/bck03.jpg);  
+    background-size: cover;
+    width: 100%;
+    height: 75%;
+    background-repeat: no-repeat;
+}
+
+/*
 .slider {
     background: url(../images/bck.jpg) no-repeat center left;  
     background-size: cover;
@@ -149,8 +225,9 @@ a {
     height: 73%;
     min-height: 100px;
 }
+*/
 .container {
-    width: 60%;
+    width: 55%;
     height: auto;
     margin:auto;
 }
@@ -205,64 +282,51 @@ a {
 
 /*--------------------------BUTTONS-----------------------------------*/
 
-.button-container{
-    width: 250px;
-    max-height: 40px;
-    padding: 10px;
-    max-width: 90%;
-    min-width: 216px;
-    margin:auto;
-}
  .facebook {
-    float:left;
-    background: url(../images/facebook.jpg) no-repeat center left; 
-    background-color: #5d82d1;
-    border-bottom: 1px solid #4b6aaa;
-    text-shadow: 0px 1px #4e6daf;
+    background-image: url(../images/facebook_trans.jpg); 
 }
 .pinterest {
-    float: right;
-    background: url(../images/pinterest.jpg) no-repeat center left; 
-    background-color: #e13138;
-    border-bottom: 1px solid #ae262c;
-    text-shadow: 0px 1px #b1272d;
+    background-image: url(../images/pinterest_trans.jpg);
+    margin-right: 15px; 
 }
 
-.facebook:hover{
-    background-color:#688bd5;
-}
-.facebook:active {
-     background-color: #5f7bb7;
-}
 
-.pinterest:hover{
-    background-color:#d9454b;
-}
-.pinterest:active {
-     background-color: #c83f44;
-}
 
 /*--------------------------MEDIA QUERIES-----------------------------------*/
 
 
-@media (min-width : 200px) and (max-width : 480px) {
 
-        .header {
-            background: url(../images/novolar_logo_mobile.png) no-repeat center center; 
-            background-color: rgba(254,66,33,0.8);
-            width: 100%;
-            height: 6%;
-            min-height: 44px;
-            position: absolute;
-            z-index: 99; 
+@media (min-width : 200px) and (max-width : 480px) {
+        
+         .header_wrapper {
+            width: 96%;
+            height: 100%;
+            text-align: center;
+            margin-left: 2%;
+        }
+
+        .logo {
+            height: 100%;
+            width: 40%;
+            float: left;
+            background-image: url(../images/novolar_logo_mobile.png);
+            background-repeat: no-repeat;
+            background-position: 0% 50%;
+
+        }
+        .opt.text.txt-white.section{
+            display: none;
+        }
+        .text.title{
+            font-size: 20px;
+            line-height: 38px;
+        }
+        .text.section{
+            font-size: 13px;
         }
 
         .slider {
-            background: url(../images/bck_mobile.jpg) no-repeat center left; 
-            background-size: cover; 
-            width: 100%;
-            height: 50%;
-            min-height: 50px;
+            display: none;
             }
 
         .container {
@@ -277,14 +341,7 @@ a {
             margin:auto;
             min-width: 100%;
         }
-
-         .facebook {
-            float:none;
-            margin-bottom: 20px;
-        }
-        .pinterest {
-            float: none;
-        }     
+   
         .image_container{
             width: 40%;
          }
@@ -304,6 +361,18 @@ a {
 
 
 @media (min-width : 480px) and (max-width : 1024px) {
+    
+        .header_wrapper {
+            width: 96%;
+            height: 100%;
+            text-align: center;
+            margin-left: 2%;
+        }
+
+        .opt.text.txt-white.section{
+            display: none;
+        }
+        
 
         .slider {
             background-size: cover;
@@ -326,13 +395,6 @@ a {
             min-width: 100%;
         }
 
-         .facebook {
-            float:none;
-            margin-bottom: 20px;
-        }
-        .pinterest {
-            float: none;
-        }  
         .contact_container {
             width: 100%;
         }  
@@ -340,8 +402,13 @@ a {
          .image_contact{
             width: 50%;
          } 
+
         
 }
+
+
+
+
 
 /*------------------
         Lunes a Viernes :
